@@ -1,4 +1,4 @@
-const mongoose = require('../configs/database');
+const mongoose = require('../configs/connection');
 const Schema = mongoose.Schema;
 
 const OpportunitySchema = new Schema({
@@ -14,7 +14,7 @@ const OpportunitySchema = new Schema({
     type: Number, 
     require: true 
   },
-  get_time: { 
+  when: { 
     type: Date, 
     require: true
   }
