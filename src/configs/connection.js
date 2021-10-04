@@ -1,9 +1,7 @@
 const mongoose = require('mongoose');
 require('dotenv/config');
 
-// const uri = process.env.DATABASE_KEY;
-
-const uri = "mongodb+srv://alvesph:6DYaptmaOKIp89TM@linkapi.s880p.mongodb.net/linkapi?retryWrites=true&w=majority"
+const uri = process.env.DATABASE_KEY;
 
 mongoose.connect(uri, {
   useNewUrlParser: true,
