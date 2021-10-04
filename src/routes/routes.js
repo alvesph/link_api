@@ -1,11 +1,9 @@
-const { Router } = require('express');
+const express = require('express');
+const router = express.Router();
 
-const IntegrationController = require('../controllers/IntegrationController');
 const OpportunityController = require('../controllers/OpportunityController');
 
-const routes = Router();
+router.post('/', OpportunityController.create); 
+router.get('/:id', OpportunityController.show);
 
-routes.get('/bling', IntegrationController.index) 
-routes.get('/pipedrive', OpportunityController.index)
-
-module.exports = routes;
+module.exports = router;
